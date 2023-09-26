@@ -2,6 +2,12 @@
 import { useRef } from "react";
 import { useSnapCarousel } from "react-snap-carousel";
 
+export type carouselData = {
+    imageUrl: string,
+    title: string,
+    desc: string
+  }[];
+
 export default function Carousel (props : {children: React.ReactNode, data : any[], id: string}) {
 
     const {scrollRef, pages, activePageIndex,goTo} = useSnapCarousel({axis : "x"});

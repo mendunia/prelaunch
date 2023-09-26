@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 import FooterImage from './components/footerImage'
+import HeaderText from './components/headerText'
 
 const poppins = Poppins({
   weight: ['400', '500', '600', '700', '800'],
@@ -17,6 +18,8 @@ export const metadata: Metadata = {
   description: 'Platform yang mempertemukan Pelajar Indonesia dengan Agensi Pendidikan di seluruh Indonesia.',
 }
 
+const metalink = [{title: "Tentang Mendunia", url: "/about"}, {title: "Hubungi Kami", url: "/contact"}, {title: "Daftarkan Agensi Anda", url: "/"}, {title: "Syarat dan Ketentuan", url: "/terms"}]
+
 export default function RootLayout({
   children,
 }: {
@@ -24,14 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body suppressHydrationWarning className={poppins.className + " pt-6 flex flex-col gap-5"}>
+      <body suppressHydrationWarning className={poppins.className + " min-h-screen  justify-between pt-6 flex flex-col gap-5"}>
         <nav className='flex flex-col items-center gap-6 px-8 py-6'>
         <Image src={"/company/logo.png"} className='w-48' height={25} width={100} alt='Mendunia Logo'/>
-          <div className='flex flex-col items-center justify-center text-center gap-3'>
-            <h1 className='text-2xl text-dark-grey font-semibold'>Your Gateway to <br/><span className='text-merah-inti font-bold'>Global Education!</span></h1>
-            <h2 className='text-xs leading-5 px-2 '>Platform yang mempertemukan Pelajar Indonesia dengan Agensi Pendidikan di seluruh Indonesia.</h2>
-            <Button text={"Pelajari lebih lanjut"}/>
-          </div>
+        <HeaderText/>
         </nav>
 
         {children}
@@ -52,9 +51,9 @@ export default function RootLayout({
 
 
           <div className='flex flex-col justify-center items-center gap-3'>
-          {["Tentang Mendunia", "Hubungi Kami", "Daftarkan Agensi Anda", "Syarat dan Ketentuan"].map((link, i) => 
-            <Link className='text-white text-xs' key={`Link ${i}`} href={"/link"}>
-              {link}
+          {metalink.map((link, i) => 
+            <Link className='text-white text-xs' key={`Link ${i}`} href={link.url}>
+              {link.title}
             </Link>)}
             <p className='inline-flex text-xs justify-center items-center text-white underline gap-1'><Image className='mt-1.5' width={20} height={1} src={"/icons/indo.png"} alt='Current Language'/>Bahasa</p>
 
