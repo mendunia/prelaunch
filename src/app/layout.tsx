@@ -29,7 +29,7 @@ export default function RootLayout({
         <Image src={"/company/logo.png"} className='w-48' height={25} width={100} alt='Mendunia Logo'/>
           <div className='flex flex-col items-center justify-center text-center gap-3'>
             <h1 className='text-2xl text-dark-grey font-semibold'>Your Gateway to <br/><span className='text-merah-inti font-bold'>Global Education!</span></h1>
-            <h2 className='text-xs leading-4 px-2'>Platform yang mempertemukan Pelajar Indonesia dengan Agensi Pendidikan di seluruh Indonesia.</h2>
+            <h2 className='text-xs leading-5 px-2 '>Platform yang mempertemukan Pelajar Indonesia dengan Agensi Pendidikan di seluruh Indonesia.</h2>
             <Button text={"Pelajari lebih lanjut"}/>
           </div>
         </nav>
@@ -38,10 +38,6 @@ export default function RootLayout({
 
         <div className="w-full h-full flex flex-col gap-7 justify-center items-center bg-gradient-to-b from-red-700 via-red-700 to-red-950 py-7">
           <FooterImage/>
-
-          <h1 className='text-white font-semibold text-2xl text-center'>Punya Pertanyaan?</h1>
-          
-          <Button type={"Secondary"} text={"Tanya Disini"} />
 
           <Image src={"/company/logo-white.png"} width={200} height={50} alt='Company Logo'/>
           <div className='flex gap-5'>
@@ -55,10 +51,13 @@ export default function RootLayout({
           </div>
 
 
+          <div className='flex flex-col justify-center items-center gap-2'>
           {["Tentang Mendunia", "Hubungi Kami", "Daftarkan Agensi Anda", "Syarat dan Ketentuan"].map((link, i) => 
-            <Link className='text-white' key="link" href={"/link"}>
+            <Link className='text-white' key={`Link ${i}`} href={"/link"}>
               {link}
             </Link>)}
+
+          </div>
 
             <p className='inline-flex justify-center items-center text-white underline gap-1'><Image className='mt-1.5' width={20} height={1} src={"/icons/indo.png"} alt='Current Language'/>Bahasa</p>
         </div>
