@@ -66,10 +66,14 @@ export default function Home() {
       <div className='w-full flex flex-col px-8'>
         <h1 className='w-full text-center font-bold text-merah-inti text-xl'>Bagaimana cara mendaftarkan agensi Anda?</h1>
         <Carousel data={["s"]} id='Keuntungan'>
-          {howToData.map((keuntungan, i) => <div className={`min-w-fit px-14 py-5 flex flex-col gap-3 `} key={"Keuntungan " + i}>
-            <Image src={keuntungan.imageUrl} width={500} height={50} alt={keuntungan.title}/>
-            <h1 className='font-semibold text-dark-grey'>{keuntungan.title}</h1>
-            <p className='text-xs leading-5'>{keuntungan.desc}</p>
+          {howToData.map((keuntungan, i) => <div className={`min-w-fit  px-8 py-5`} key={"Keuntungan " + i}>
+            <div className=' pb-4 min-h-full rounded-2xl shadow flex flex-col gap-3'>
+              <Image src={keuntungan.imageUrl} width={500} height={50} alt={keuntungan.title}/>
+              <div className='px-4 flex flex-col gap-3 justify-center items-center'>
+                <h1 className='font-semibold text-dark-grey'>{keuntungan.title}</h1>
+                <p className='text-xs leading-5'>{keuntungan.desc}</p>
+              </div>
+            </div>
           </div>)}
         </Carousel>
       </div>
