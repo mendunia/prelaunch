@@ -25,7 +25,7 @@ export default function Page()
         height: 23
     }]
 
-    return <div className="bg-grey py-2 px-10 gap-10  flex flex-col justify-center items-center">
+    return <div className="bg-grey p-10 gap-10  flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-5">
             <div className="flex flex-col justify-center items-center gap-2">
                 <h1 className="text-2xl text-merah-inti font-semibold">Mari Terhubung</h1>
