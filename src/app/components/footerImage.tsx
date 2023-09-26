@@ -8,7 +8,7 @@ export default function FooterImage()
 {
     const pathname = usePathname()
 
-    if(pathname === "/")
+    if(pathname === "/" || pathname === "/about")
     return (
         <div className='flex flex-col gap-3'>
             <Image height={250} width={250} src="/hero/questioning.png" alt='questioning people image'/>

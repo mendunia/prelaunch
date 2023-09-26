@@ -1,12 +1,8 @@
 import Button from '@/components/button'
-import Carousel from '@/components/carousel'
+import Carousel, { carouselData } from '@/components/carousel'
 import Image from 'next/image'
 
-type carouselData = {
-  imageUrl: string,
-  title: string,
-  desc: string
-}[];
+
 
 const keutunganData : carouselData = [
   {
