@@ -22,7 +22,7 @@ export default function Page()
         }
       ]
 
-    return <div className="bg-grey p-10 gap-10  flex flex-col justify-center items-center">
+    return <div className="animate__animated animate__fadeInLeft bg-grey p-10 pb-0 gap-10  flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-4">
             <h1 className="text-xl text-merah-inti font-semibold">Apa itu Mendunia?</h1>
             <p className="text-xs text-center">

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FooterImage from './components/footerImage'
 import HeaderText from './components/headerText'
+import 'animate.css';
 
 const poppins = Poppins({
   weight: ['400', '500', '600', '700', '800'],

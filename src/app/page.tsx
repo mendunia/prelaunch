@@ -2,8 +2,6 @@ import Button from '@/components/button'
 import Carousel, { carouselData } from '@/components/carousel'
 import Image from 'next/image'
 
-
-
 const keutunganData : carouselData = [
   {
     imageUrl: "/graphics/student.svg",
@@ -48,7 +46,7 @@ const howToData : carouselData = [
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col gap-5 ">
-      <div className='w-full flex flex-col bg-grey p-5 px-8 '>
+      <div className='animate__animated animate__fadeInUp  w-full flex flex-col bg-grey p-5 px-8 '>
         <h1 className='w-full text-center font-bold text-merah-inti text-xl'>Keuntungan bergabung dengan Mendunia</h1>
         
         <Carousel data={["s"]} id='Keuntungan'>
