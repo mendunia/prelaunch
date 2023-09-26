@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Button from '@/components/button'
+import Link from 'next/link'
 export default function FooterImage()
 {
     const pathname = usePathname()
@@ -14,10 +15,10 @@ export default function FooterImage()
 
             <h1 className='text-white font-semibold text-2xl text-center'>Punya Pertanyaan?</h1>
 
-            <div className='flex justify-center'>
+            <Link className='flex justify-center' href="/contact">
                 <Button type={"Secondary"} text={"Tanya Disini"} />
 
-            </div>
+            </Link>
 
         </div>
     )

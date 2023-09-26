@@ -51,15 +51,15 @@ export default function RootLayout({
           </div>
 
 
-          <div className='flex flex-col justify-center items-center gap-2'>
+          <div className='flex flex-col justify-center items-center gap-3'>
           {["Tentang Mendunia", "Hubungi Kami", "Daftarkan Agensi Anda", "Syarat dan Ketentuan"].map((link, i) => 
-            <Link className='text-white' key={`Link ${i}`} href={"/link"}>
+            <Link className='text-white text-xs' key={`Link ${i}`} href={"/link"}>
               {link}
             </Link>)}
+            <p className='inline-flex text-xs justify-center items-center text-white underline gap-1'><Image className='mt-1.5' width={20} height={1} src={"/icons/indo.png"} alt='Current Language'/>Bahasa</p>
 
           </div>
 
-            <p className='inline-flex justify-center items-center text-white underline gap-1'><Image className='mt-1.5' width={20} height={1} src={"/icons/indo.png"} alt='Current Language'/>Bahasa</p>
         </div>
 
       </body>
