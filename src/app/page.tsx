@@ -45,8 +45,8 @@ const howToData : carouselData = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col gap-5 ">
-      <div className='animate__animated animate__fadeInUp  w-full flex flex-col bg-grey p-5 px-8 '>
+    <main className="animate__animated animate__fadeInLeft min-h-screen flex flex-col gap-5 ">
+      <div className=' w-full flex flex-col bg-grey p-5 px-8 '>
         <h1 className='w-full text-center font-bold text-merah-inti text-xl'>Keuntungan bergabung dengan Mendunia</h1>
         
         <Carousel data={["s"]} id='Keuntungan'>
@@ -74,7 +74,9 @@ export default function Home() {
       </div>
 
     <div className='w-full flex justify-center px-8'>
-    <Button text={"Daftarkan agensi anda. Gratis!"}/>
+    <div className="flex justify-center transition-all animate-pulse w-full">
+              <Button text={"Daftarkan agensi anda. Gratis!"}/>
+            </div>
 
     </div>
         
