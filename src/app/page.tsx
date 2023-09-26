@@ -50,8 +50,9 @@ export default function Home() {
     <main className="min-h-screen flex flex-col gap-5 ">
       <div className='w-full flex flex-col bg-grey p-5 px-8 '>
         <h1 className='w-full text-center font-bold text-merah-inti text-xl'>Keuntungan bergabung dengan Mendunia</h1>
+        
         <Carousel data={["s"]} id='Keuntungan'>
-          {keutunganData.map((keuntungan, i) => <div className={`min-w-fit px-14 py-5 text-center flex flex-col gap-3 justify-center  items-center `} key={"Keuntungan " + i}>
+          {keutunganData.map((keuntungan, i) => <div className={`min-w-fit py-5 px-5 text-center flex flex-col gap-3 justify-center  items-center `} key={"Keuntungan " + i}>
             <Image src={keuntungan.imageUrl} width={50} height={50} alt={keuntungan.title}/>
             <h1 className='font-semibold text-dark-grey'>{keuntungan.title}</h1>
             <p className='text-xs leading-5'>{keuntungan.desc}</p>
