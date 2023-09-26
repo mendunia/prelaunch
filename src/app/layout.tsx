@@ -27,9 +27,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body suppressHydrationWarning className={poppins.className + " min-h-screen  justify-between pt-6 flex flex-col gap-5"}>
+      <body suppressHydrationWarning className={poppins.className + " min-h-screen  justify-between flex flex-col gap-5"}>
         <nav className='flex flex-col items-center gap-6 px-8 py-6'>
+
+        <Link href="/">
         <Image src={"/company/logo.png"} className='w-48' height={25} width={100} alt='Mendunia Logo'/>
+          </Link>
+
         <HeaderText/>
         </nav>
 
@@ -38,7 +42,10 @@ export default function RootLayout({
         <div className="w-full h-full flex flex-col gap-7 justify-center items-center bg-gradient-to-b from-red-700 via-red-700 to-red-950 py-7">
           <FooterImage/>
 
-          <Image src={"/company/logo-white.png"} width={200} height={50} alt='Company Logo'/>
+          <Link href="/">
+            <Image src={"/company/logo-white.png"} width={200} height={50} alt='Company Logo'/>
+          </Link>
+
           <div className='flex gap-5'>
             {["linkedin", "facebook", "instagram"].map((social, i) => <Image 
               key={`social logo ${i}`}
