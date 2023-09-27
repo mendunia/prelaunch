@@ -8,19 +8,19 @@ export type carouselData = {
     desc: string
   }[];
 
-export default function Carousel (props : {children: React.ReactNode, data : any[], id: string}) {
+export default function Carousel (props : {children: React.ReactNode, data : any[], id: string, className?: string}) {
 
     const {scrollRef, pages, activePageIndex,goTo} = useSnapCarousel({axis : "x"});
 
     const elementRef = useRef<HTMLImageElement>(null)
 
     return(
-    <div className="flex flex-col gap-3">
-        <ul className='relative flex overflow-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-200 snap-mandatory snap-x' ref={scrollRef}>
+    <div className={`flex flex-col gap-3`}>
+        <ul className={props.className ? props.className : `relative flex overflow-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-200 snap-mandatory snap-x`} ref={scrollRef}>
             {...[props.children]}
         </ul>
 
-        <div className='w-full  flex gap-1 justify-center'>
+        {pages.length > 2 && <div className='w-full  flex gap-1 justify-center'>
             {pages.map((_, i) => (
                 <div key={props.id + i}>
                     <button
@@ -29,7 +29,7 @@ export default function Carousel (props : {children: React.ReactNode, data : any
                     </button>
                 </div>
             ))}
-        </div>
+        </div>}
     </div>
     )
     
