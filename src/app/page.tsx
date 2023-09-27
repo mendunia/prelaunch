@@ -92,13 +92,13 @@ export default function Home() {
         </Carousel>
       </div>
 
-    <div className='w-full flex justify-center px-8 md:py-5'>
-      <div className="flex justify-center transition-all animate-pulse w-full">
-          <Button text={"Daftarkan agensi anda. Gratis!"}/>
+      <div className='w-full flex justify-center px-8 py-5 md:py-10'>
+        <div className="flex justify-center transition-all animate-pulse w-full">
+            <Button text={"Daftarkan agensi anda. Gratis!"}/>
+        </div>
       </div>
-     </div>
 
-     <div className='relative w-full max-sm:hidden'>
+      <div className='relative w-full max-sm:hidden md:pb-5'>
         <Image src='/hero/banner-qna.png' width={1280} height={360} alt='qna-background'/>
         <div className='absolute left-5 top-8 flex flex-col gap-6'>
           <h1 className='text-3xl font-semibold text-white'>Punya Pertanyaan?</h1>
@@ -106,7 +106,7 @@ export default function Home() {
             <Button type='Secondary' text={"Tanya disini"} />
           </Link>
         </div>
-     </div>
+      </div>
         
     </div>
   )
