@@ -29,16 +29,21 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body suppressHydrationWarning className={poppins.className + " min-h-screen  justify-between flex flex-col gap-5"}>
-        <nav className='flex flex-col items-center gap-6 px-8 py-6'>
+        <nav className='flex flex-col items-center md:items-start gap-6 px-8 py-6'>
 
-        <Link href="/">
-        <Image src={"/company/logo.png"} className='w-48' height={25} width={100} alt='Mendunia Logo'/>
+        <div className='flex w-full justify-between'>
+          <Link href="/">
+            <Image src={"/company/logo.png"} className='w-48' height={25} width={100} alt='Mendunia Logo'/>
           </Link>
 
+        </div>
         <HeaderText/>
+
         </nav>
 
-        {children}
+        <main className='min-h-screen flex flex-col gap-5 md:px-5'>
+          {children}
+        </main>
 
         <div className="w-full h-full flex flex-col gap-7 justify-center items-center bg-gradient-to-b from-red-700 via-red-700 to-red-950 py-7">
           <FooterImage/>
