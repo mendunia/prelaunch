@@ -29,13 +29,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body suppressHydrationWarning className={poppins.className + " min-h-screen  justify-between flex flex-col gap-5"}>
+      <body suppressHydrationWarning className={poppins.className + " min-h-screen flex flex-col"}>
         <Header/>
-
-        <main className='flex flex-col gap-5 md:px-5'>
+        <main className='md:px-5 h-full grow'>
           {children}
         </main>
-
         <Footer/>       
       </body>
     </html>
