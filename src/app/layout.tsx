@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="id">
       <body suppressHydrationWarning className={poppins.className + " min-h-screen flex flex-col"}>
         <Header/>
-        <main className='md:px-5 h-full grow'>
+        <main className='h-full grow'>
           {children}
         </main>
         <Footer/>       

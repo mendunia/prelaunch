@@ -45,7 +45,7 @@ const howToData : carouselData = [
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="flex flex-col gap-5 md:px-5">
 
       <div className='max-sm:hidden animate__animated animate__fadeIn animate__slow relative w-full flex'>
         <Image src={"/hero/banner.png"} width={1280} height={360} alt='Banner'/>
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=' w-full flex flex-col bg-grey p-5 md:pt-10 md:gap-5 px-8 '>
+      <div className=' w-full flex flex-col bg-grey p-5 md:gap-5 px-8 '>
         <h1 className='animate__animated animate__slideInUp w-full text-center font-bold text-merah-inti text-xl md:text-2xl'>Keuntungan bergabung dengan Mendunia</h1>
           <Carousel data={["s"]} id='Keuntungan'>
               {keutunganData.map((keuntungan, i) => <div className={`max-sm:min-w-fit max-sm:[animate__animated] animate__fadeInUp md:w-1/3 py-5 px-5 text-center flex flex-col gap-3 md:gap-4 justify-center md:justify-start items-center `} key={"Keuntungan " + i}>
@@ -92,7 +92,7 @@ export default function Home() {
         </Carousel>
       </div>
 
-      <div className='w-full flex justify-center px-8 py-5 md:py-10'>
+      <div className='w-full flex justify-center px-8 py-5'>
         <div className="flex justify-center transition-all animate-pulse w-full">
             <Button text={"Daftarkan agensi anda. Gratis!"}/>
         </div>
