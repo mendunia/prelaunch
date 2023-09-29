@@ -94,7 +94,9 @@ export default function Home() {
 
       <div className='w-full flex justify-center px-8 py-5'>
         <div className="flex justify-center transition-all animate-pulse w-full">
+          <Link href={"https://forms.gle/vfwhYozdwvvGYXmh7"}>
             <Button text={"Daftarkan agensi anda. Gratis!"}/>
+          </Link>
         </div>
       </div>
 
