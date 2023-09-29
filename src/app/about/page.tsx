@@ -40,7 +40,10 @@ export default function Page()
                   pandangan menyeluruh tentang biaya, program studi, dan detail penting lainnya. Keamanan menjadi fokus utama kami. Semua agensi dalam Mendunia telah melewati 
                   verifikasi ketat untuk memastikan keberlangsungan dan keabsahan. Jelajahi opsi pendidikan dengan percaya diri bersama Mendunia.
               </p>
+              <Link href={"https://forms.gle/vfwhYozdwvvGYXmh7"}>
               <Button text={"Daftarkan agensi anda. Gratis!"}/>
+
+              </Link>
           </div>
           <div className="max-sm:hidden py-14  lg:bg-gray-100 rounded-2xl flex justify-center ">
             <Image className="py-14 lg:py-10" src="/hero/banner-logo.png" width={500} height={200} alt="banner"/>

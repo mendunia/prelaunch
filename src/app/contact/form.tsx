@@ -14,8 +14,8 @@ export default function Form()
 
     
     return (
-        <div className="w-full bg-white rounded-lg shadow py-6 px-5 text-xs">
-            <h1 className="text-center text-base text-merah-inti font-semibold">Contact Form</h1>
+        <div className="w-full bg-white rounded-lg shadow py-6 lg:py-10 px-5 text-xs lg:text-base max-w-2xl">
+            <h1 className="text-center text-base lg:text-2xl text-merah-inti font-semibold">Contact Form</h1>
             <Formik
                 initialValues={{nama : "", email: "", subjek: "Pendaftaran Agensi", pesan: ""}}
                 validate={values => {
@@ -45,7 +45,7 @@ export default function Form()
                 }}
             >
                 {({values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting}) => 
-                    <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+                    <form className="flex flex-col gap-3 lg:gap-8" onSubmit={handleSubmit}>
                         <div className={formDivClass}>
                             <label htmlFor="email">Email*</label>
                             <input
@@ -83,7 +83,7 @@ export default function Form()
 
                         <div className={formDivClass}>
                             <label htmlFor="pesan">Pesan*</label>
-                            <Field onChange={handleChange} onBlur={handleBlur} value={values.pesan} className={formStyle + " h-24"} name="pesan" as="textarea"/>
+                            <Field onChange={handleChange} onBlur={handleBlur} value={values.pesan} className={formStyle + " h-24 lg:h-48"} name="pesan" as="textarea"/>
                             <p className="text-red-500">{errors.pesan && touched.pesan && errors.pesan}</p>
                         </div>
 

@@ -2,17 +2,17 @@ import Link from "next/link";
 import FooterImage from "./components/footerImage";
 import Image from "next/image";
 
-const metalink = [{title: "Tentang Mendunia", url: "/about"}, {title: "Hubungi Kami", url: "/contact"}, {title: "Daftarkan Agensi Anda", url: "/"}, {title: "Syarat dan Ketentuan", url: "/terms"}]
+const metalink = [{title: "Tentang Mendunia", url: "/about"}, {title: "Hubungi Kami", url: "/contact"}, {title: "Daftarkan Agensi Anda", url: "https://forms.gle/vfwhYozdwvvGYXmh7"}, {title: "Syarat dan Ketentuan", url: "/terms"}]
 
 export default function Footer()
 {
     return(
         <div className="w-full h-full  md:px-8 py-7 md:py-10 lg:h-80 lg:py-14 gap-7  max-sm:justify-center max-sm:items-center flex justify-center bg-gradient-to-b from-red-700 via-red-700 to-red-950  ">
-            <div className="w-full max-w-screen-2xl flex flex-col md:flex-row md:justify-between">
+            <div className="w-full max-w-screen-2xl flex flex-col gap-10 md:gap-0 justify-center items-center md:flex-row md:justify-between md:items-start">
             
             <FooterImage/>
 
-            <div className='flex flex-col max-w-[50%] lg:justify-between justify-start items-start gap-5 md:gap-3'>
+            <div className='flex flex-col max-w-[50%]  lg:justify-between justify-start items-start gap-5 md:gap-3'>
                 <div className="flex flex-col gap-3">
                 <Link href="/" className="md:-mx-3 lg:-mx-5">
                     <Image src={"/company/logo-white.png"} width={250} height={50} alt='Company Logo'/>
