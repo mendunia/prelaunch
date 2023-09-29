@@ -10,7 +10,7 @@ export default function HeaderText()
         return <div 
             className='md:hidden animate__animated animate__fadeIn animate__slow flex flex-col items-center justify-center text-center gap-3'>
             <h1 className='text-2xl text-dark-grey font-semibold'>Your Gateway to <br/><span className='text-merah-inti font-bold'>Global Education!</span></h1>
-            <h2 className='text-xs leading-5 px-2 '>Platform yang mempertemukan Pelajar Indonesia dengan Agensi Pendidikan di seluruh Indonesia.</h2>
+            <h2 className='text-xs leading-5 px-14 '>Platform yang mempertemukan Pelajar Indonesia dengan Agensi Pendidikan di seluruh Indonesia.</h2>
             
             {path !== "/about" && <Link href={"/about"}><Button text={"Pelajari lebih lanjut"}/></Link>}
           </div>
