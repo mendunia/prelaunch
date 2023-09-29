@@ -48,7 +48,7 @@ export default function Home() {
     <div className="flex flex-col gap-5 md:px-5">
 
       <div className='max-sm:hidden animate__animated animate__fadeIn animate__slow relative w-full flex'>
-        <Image src={"/hero/banner.png"} width={1280} height={360} alt='Banner'/>
+        <Image className='w-full' src={"/hero/banner.png"} width={1280} height={360} alt='Banner'/>
         <div className='text-white absolute bottom-4 right-10 flex flex-col gap-1'>
           <p className='text-xs text-center'>Apa itu Mendunia?</p>
           <Link href="/about">
@@ -99,7 +99,7 @@ export default function Home() {
       </div>
 
       <div className='relative w-full max-sm:hidden md:pb-5'>
-        <Image src='/hero/banner-qna.png' width={1280} height={360} alt='qna-background'/>
+        <Image className='w-full' src='/hero/banner-qna.png' width={1280} height={360} alt='qna-background'/>
         <div className='absolute left-5 top-8 flex flex-col gap-6'>
           <h1 className='text-3xl font-semibold text-white'>Punya Pertanyaan?</h1>
           <Link href={"/contact"}>
