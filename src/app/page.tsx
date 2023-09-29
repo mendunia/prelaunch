@@ -45,7 +45,7 @@ const howToData : carouselData = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-5 md:px-5">
+    <div className="flex flex-col gap-5 ">
 
       <div className='max-sm:hidden animate__animated animate__fadeIn animate__slow relative w-full flex'>
         <Image className='w-full' src={"/hero/banner.png"} width={1280} height={360} alt='Banner'/>
@@ -78,7 +78,7 @@ export default function Home() {
 
       <div className=' w-full flex flex-col px-8'>
         <h1 className='animate__animated animate__slideInUp w-full text-center font-bold text-merah-inti text-xl md:text-2xl'>Bagaimana cara mendaftarkan agensi Anda?</h1>
-        <Carousel className=' flex overflow-auto gap-5' data={["s"]} id='Keuntungan'>
+        <Carousel className=' flex overflow-auto gap-10' data={["s"]} id='Keuntungan'>
           {howToData.map((keuntungan, i) => 
             <li className={` max-sm:min-w-fit md:min-w-[33.3%] px-8 md:px-0 py-5`} key={"Keuntungan " + i}>
               <div className=' pb-4 min-h-full rounded-2xl shadow flex flex-col gap-3'>

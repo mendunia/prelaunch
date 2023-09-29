@@ -25,9 +25,9 @@ export default function Page()
         height: 23
     }]
 
-    return <div className="w-full min-h-full h-full p-10 md:px-5 py-2 gap-10 flex flex-col justify-center items-center">
+    return <div className="w-full min-h-full h-full max-sm:p-10 py-2 gap-10 flex flex-col justify-center items-center">
         <div className="max-sm:hidden flex justify-center w-full">
-            <Image src={"/hero/banner-contact.png"} width={1280} height={360} alt="hero banner contact"/>
+            <Image className="w-full" src={"/hero/banner-contact.png"} width={1280} height={360} alt="hero banner contact"/>
         </div>
         <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col justify-center md:justify-start md:items-start md:text-start items-center gap-5">
