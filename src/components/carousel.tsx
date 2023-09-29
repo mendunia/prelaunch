@@ -20,7 +20,7 @@ export default function Carousel (props : {children: React.ReactNode, data : any
             {...[props.children]}
         </ul>
 
-        {pages.length > 1 && <div className='w-full  flex gap-1 justify-center'>
+        {pages.length > 2 && <div className='w-full  flex gap-1 justify-center'>
             {pages.map((_, i) => (
                 <div key={props.id + i}>
                     <button
