@@ -9,7 +9,7 @@ export default function Header()
 
         <div className='flex w-full justify-between'>
           <Link className="flex max-sm:justify-center w-full" href="/">
-            <Image src={"/company/logo.png"} className='w-48' height={25} width={100} alt='Mendunia Logo'/>
+            <Image src={"/company/logo.png"} className='w-48 lg:w-56' height={25} width={100} alt='Mendunia Logo'/>
           </Link>
 
         </div>

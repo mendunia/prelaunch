@@ -49,8 +49,8 @@ export default function Home() {
 
       <div className='max-sm:hidden animate__animated animate__fadeIn animate__slow relative w-full flex'>
         <Image className='w-full' src={"/hero/banner.png"} width={1280} height={360} alt='Banner'/>
-        <div className='text-white absolute bottom-4 right-10 flex flex-col gap-1'>
-          <p className='text-xs text-center'>Apa itu Mendunia?</p>
+        <div className='text-white absolute bottom-4 xl:bottom-8 right-10 flex flex-col gap-1'>
+          <p className='text-xs lg:text-base text-center'>Apa itu Mendunia?</p>
           <Link href="/about">
             <Button type='Secondary' text={"Pelajari lebih lanjut"}/>
 
@@ -58,8 +58,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=' w-full flex flex-col bg-grey p-5 md:gap-5 px-8 '>
-        <h1 className='animate__animated animate__slideInUp w-full text-center font-bold text-merah-inti text-xl md:text-2xl'>Keuntungan bergabung dengan Mendunia</h1>
+      <div className=' w-full flex flex-col bg-grey p-5 md:gap-5 lg:gap-14 px-8 lg:py-7 '>
+        <h1 className='animate__animated animate__slideInUp w-full text-center font-bold text-merah-inti text-xl lg:text-5xl md:text-2xl'>Keuntungan bergabung dengan Mendunia</h1>
           <Carousel data={["s"]} id='Keuntungan'>
               {keutunganData.map((keuntungan, i) => <div className={`max-sm:min-w-fit max-sm:[animate__animated] animate__fadeInUp md:w-1/3 py-5 px-5 text-center flex flex-col gap-3 md:gap-4 justify-center md:justify-start items-center `} key={"Keuntungan " + i}>
                 <div className='flex flex-col justify-center items-center gap-3'>
@@ -67,25 +67,25 @@ export default function Home() {
                   <Image src={keuntungan.imageUrl} width={50} height={50} alt={keuntungan.title} loading='eager'/>
 
                   </div>
-                <h1 className='font-semibold text-dark-grey'>{keuntungan.title}</h1>
+                <h1 className='font-semibold lg:text-2xl text-dark-grey'>{keuntungan.title}</h1>
                 </div>
 
-                <p className='text-xs leading-5'>{keuntungan.desc}</p>
+                <p className='text-xs lg:text-base leading-5'>{keuntungan.desc}</p>
               </div>)}
 
           </Carousel>
       </div>
 
-      <div className=' w-full flex flex-col px-8'>
-        <h1 className='animate__animated animate__slideInUp w-full text-center font-bold text-merah-inti text-xl md:text-2xl'>Bagaimana cara mendaftarkan agensi Anda?</h1>
-        <Carousel className=' flex overflow-auto gap-10' data={["s"]} id='Keuntungan'>
+      <div className=' w-full flex flex-col lg:gap-14 px-8 lg:py-7'>
+        <h1 className='animate__animated animate__slideInUp w-full text-center font-bold text-merah-inti text-xl md:text-2xl lg:text-5xl'>Bagaimana cara mendaftarkan agensi Anda?</h1>
+        <Carousel className=' flex overflow-auto gap-10 lg:grid lg:grid-cols-4' data={["s"]} id='Keuntungan'>
           {howToData.map((keuntungan, i) => 
-            <li className={` max-sm:min-w-fit md:min-w-[33.3%] px-8 md:px-0 py-5`} key={"Keuntungan " + i}>
+            <li className={` max-sm:min-w-fit md:min-w-[33.3%] lg:min-w-0 px-8 md:px-0 py-5`} key={"Keuntungan " + i}>
               <div className=' pb-4 min-h-full rounded-2xl shadow flex flex-col gap-3'>
                 <Image src={keuntungan.imageUrl} width={500} height={50} alt={keuntungan.title}/>
                 <div className='px-4 flex flex-col gap-3 justify-center items-center'>
-                  <h1 className='font-semibold text-dark-grey'>{keuntungan.title}</h1>
-                  <p className='text-xs leading-5'>{keuntungan.desc}</p>
+                  <h1 className='font-semibold lg:text-2xl text-dark-grey'>{keuntungan.title}</h1>
+                  <p className='text-xs lg:text-base leading-5'>{keuntungan.desc}</p>
                 </div>
               </div>
           </li>)}
@@ -100,8 +100,8 @@ export default function Home() {
 
       <div className='relative w-full max-sm:hidden md:pb-5'>
         <Image className='w-full' src='/hero/banner-qna.png' width={1280} height={360} alt='qna-background'/>
-        <div className='absolute left-5 top-8 flex flex-col gap-6'>
-          <h1 className='text-3xl font-semibold text-white'>Punya Pertanyaan?</h1>
+        <div className='absolute left-5 lg:left-14 top-8 lg:top-16 flex flex-col gap-6'>
+          <h1 className='text-3xl lg:text-5xl font-semibold text-white'>Punya Pertanyaan?</h1>
           <Link href={"/contact"}>
             <Button type='Secondary' text={"Tanya disini"} />
           </Link>
